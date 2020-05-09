@@ -19,6 +19,7 @@ body {
   padding: 2px 12px;
   border-left: 8px solid var(--main);
   display: flex;
+  flex-wrap: wrap;
 }
 
 .first-sect {
@@ -27,7 +28,7 @@ body {
 
 .name {
   font-size: 42px;
-  line-height: 0;
+  margin: 0;
   letter-spacing: 0.162em;
   font-weight: 400;
 }
@@ -96,11 +97,13 @@ hr {
 
 .projects {
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
   margin-top: 30px;
 }
 
 .card {
+  flex-basis: 240px;
   padding: 12px;
   border-left: 1px solid var(--main);
   color: var(--gray);
@@ -129,4 +132,11 @@ hr {
 
 .cta:hover {
   background-color: var(--main-low);
+}
+
+/* tablit view */
+@media only screen and (max-width: 600px) {
+ .main {
+  padding: 40px 3rem;
+}
 }
