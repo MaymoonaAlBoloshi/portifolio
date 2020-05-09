@@ -1,0 +1,132 @@
+:root {
+  --main: rgb(52, 77, 114);
+  --main-low: rgba(52, 77, 114, 0.2);
+  --gray: rgb(75, 75, 75);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(242, 253, 253);
+  color: var(--gray);
+}
+
+.main {
+  padding: 40px 10rem;
+}
+
+.intro {
+  padding: 2px 12px;
+  border-left: 8px solid var(--main);
+  display: flex;
+}
+
+.first-sect {
+  flex: 3;
+}
+
+.name {
+  font-size: 42px;
+  line-height: 0;
+  letter-spacing: 0.162em;
+  font-weight: 400;
+}
+
+.desc {
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.167em;
+  font-weight: 400;
+}
+
+.desc span {
+  color: var(--main);
+  font-weight: 600;
+}
+
+.navbar {
+  list-style: none;
+  flex: 1;
+}
+
+.nav-item {
+  display: inline;
+  padding: 2px 6px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.125em;
+  font-weight: 500;
+  color: var(--gray);
+}
+
+.nav-item a:hover {
+  color: var(--main);
+  font-weight: 600;
+}
+
+/* project section */
+
+.proj {
+  margin-top: 40px;
+}
+.proj-name {
+  /* background-color: gray; */
+  border-right: 8px solid var(--main);
+  text-align: right;
+  margin: 12px 0;
+}
+
+.proj-txt {
+  font-size: 42px;
+  /* line-height: 0; */
+  color: var(--gray);
+  letter-spacing: 0.162em;
+  font-weight: 400;
+  padding: 2px 12px;
+}
+
+hr {
+  height: 8px;
+  background-color: var(--main);
+}
+
+.projects {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.card {
+  padding: 12px;
+  border-left: 1px solid var(--main);
+  color: var(--gray);
+}
+
+.card-title {
+  font-size: 24px;
+  /* line-height: 0; */
+  letter-spacing: 0.077em;
+  font-weight: 600;
+}
+
+.card-desc {
+  line-height: 1.2;
+  font-size: 14px;
+  letter-spacing: 0.112em;
+}
+.cta {
+  background: none;
+  border: 2px solid var(--main);
+  padding: 2px 24px;
+  color: var(--main);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cta:hover {
+  background-color: var(--main-low);
+}
