@@ -103,12 +103,20 @@ hr {
 }
 
 .card {
-  flex-basis: 240px;
+  display: flex;
+  flex-basis: 100%;
   padding: 12px;
   border-left: 1px solid var(--main);
   color: var(--gray);
 }
 
+.card-image{
+  width: 40%;
+  /* height: 300px; */
+}
+.card-content{
+  padding: 40px;
+}
 .card-title {
   font-size: 24px;
   /* line-height: 0; */
