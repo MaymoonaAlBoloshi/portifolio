@@ -1,0 +1,135 @@
+:root {
+  --cryan: hsl(179, 62%, 43%);
+  --bight-yellow: hsl(71, 73%, 54%);
+
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-gray);
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.main-card {
+  width: 50%;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  /* height: 400px; */
+}
+
+.top-sect {
+  padding: 20px 40px;
+  /* flex-basis: 100%; */
+  width: 100%;
+}
+
+.title-t {
+  color: var(--cryan);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 2.5;
+}
+
+.desc-t {
+  color: var(--bight-yellow);
+  font-weight: 700;
+}
+
+.long-desc {
+  color: var(--grayish-blue);
+  line-height: 1.8;
+}
+
+.left-sect {
+  box-sizing: border-box;
+
+  background: var(--cryan);
+  padding: 20px 40px;
+  /* flex-basis: 50%; */
+  width: 50%;
+  color: var(--light-gray);
+}
+
+.sect-title {
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  line-height: 2;
+}
+
+.price {
+  font-size: 12px;
+  font-weight: 400px;
+}
+
+.price span {
+  font-size: 40px;
+  color: white;
+  line-height: 1;
+  padding: 6px;
+  vertical-align: middle;
+}
+
+.body-txt {
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.cta {
+  background-color: var(--bight-yellow);
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  width: 100%;
+  box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.1);
+  color: white;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.right-sect {
+  box-sizing: border-box;
+  color: var(--light-gray);
+  padding: 20px 40px;
+  /* flex-basis: 50%; */
+  background-color: var(--cryan);
+  opacity: 0.7;
+  color: white;
+  width: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-card {
+    width: 100%;
+    margin: 12px;
+  }
+
+  .top-sect {
+    padding: 10px 20px;
+  }
+    .left-sect {
+    padding: 10px 20px;
+    width: 100%;
+  }
+    .right-sect {
+    padding: 10px 20px;
+    width: 100%;
+  }
+}

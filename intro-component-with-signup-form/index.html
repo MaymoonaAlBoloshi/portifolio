@@ -71,24 +71,25 @@
     const validateForm = (event) =>{
     inputs.forEach(input => {
         let isValid = input.validity
-
+        
         if (!isValid.valid) {
           errLabel = labels.item(input.name)
-          // input.classList.add('invalid')
+          input.classList.add('invalid')
           console.log(input.name)
           console.log(errLabel )
-
-          const newErr = document.createElement('label')
-          newErr.classList.add('err')
-          newErr.style.padding = '10px'
+//////////////////////////////////////////////
+          // const newErr = document.createElement('label')
+          errLabel.classList.add('err')
+          errLabel.style.padding = '10px'
           text = "invalid field";
-          newErr.innerHTML = text
+          errLabel.innerHTML = text
           
-          form.appendChild(newErr)
+          // form.appendChild(newErr)
 
           // return false
         }
       })
+      errLabel = ''
       return false
         event.preventDefault();
       }
