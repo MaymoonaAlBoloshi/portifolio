@@ -91,6 +91,11 @@
           
           //not posting the form
           return false
+        } else if(isValid.valid){
+          errLabel = labels[index]
+           errLabel.classList.remove('err')
+          errLabel.style.padding = '0px'
+          errLabel.innerHTML = ''
         }
       })
       errLabel = ''
