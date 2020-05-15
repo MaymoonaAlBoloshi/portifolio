@@ -69,24 +69,28 @@
     let errLabel;
 
     const validateForm = (event) =>{
-    inputs.forEach(input => {
+    inputs.forEach((input, index) => {
         let isValid = input.validity
         
         if (!isValid.valid) {
-          errLabel = labels.item(input.name)
-          input.classList.add('invalid')
-          console.log(input.name)
-          console.log(errLabel )
-//////////////////////////////////////////////
-          // const newErr = document.createElement('label')
+          //getting the label that has the same index as the input
+          errLabel = labels[index]
+
           errLabel.classList.add('err')
           errLabel.style.padding = '10px'
-          text = "invalid field";
-          errLabel.innerHTML = text
+          //checking type of validation 
+          if(isValid.tooShort){
+            errText = `${input.name} is too short`;
+          } else if(isValid.valueMissing){
+            errText = `${input.name} Field is empty`;
+          } else {
+            errText = `Invalid ${input.name}`;
+          }
+          // adding validation text
+          errLabel.innerHTML = errText
           
-          // form.appendChild(newErr)
-
-          // return false
+          //not posting the form
+          return false
         }
       })
       errLabel = ''

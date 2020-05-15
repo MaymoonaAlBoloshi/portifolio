@@ -105,8 +105,8 @@ body {
 /* invalid input */
 input:invalid {
   color: var(--red);
-  border: 2px solid var(--red);
-  
+  border: 1px solid var(--red);
+
 }
 input::placeholder{
     color: rgb(97, 97, 97);
