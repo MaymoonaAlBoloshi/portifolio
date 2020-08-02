@@ -72,11 +72,17 @@ body {
   padding: 12px;
   border-radius: 5px;
   border: 1px solid var(--grayish-blue);
+    color: var(--dark-blue);
 }
 
 .signup input:focus {
   border: 1px solid var(--dark-blue);
 }
+
+/* .invalid{
+   border: 1px solid var(--red) !important;
+    color: var(--red) !important;
+} */
 
 .cta {
   padding: 12px;
@@ -105,7 +111,7 @@ body {
 /* invalid input */
 input:invalid {
   color: var(--red);
-  border: 1px solid var(--red);
+ border: 1px solid var(--red);
 
 }
 input::placeholder{
