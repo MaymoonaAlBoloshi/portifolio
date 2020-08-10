@@ -146,13 +146,16 @@ hr {
 .card {
 	margin: 12px;
 	display: flex;
-	padding: 12px;
+	padding: 24px;
 	border-left: 1px solid var(--main);
 	color: var(--gray);
 }
 
 .card-image {
 	width: 100%;
+	border: 4px double var(--main);
+		box-shadow: -10px -10px 0px var(--main-low);
+
 	/* height: 300px; */
 }
 .card-content {
