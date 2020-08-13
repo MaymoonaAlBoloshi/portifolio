@@ -40,66 +40,34 @@
             <div class="proj-name">
                 <h2 class="proj-txt">Projects</h2>
             </div>
-            <hr>
+            <hr class="hr-project">
 
             <div class="projects">
                 <div class="card">
-                    <img class="card-image" src="./base-apparel-coming-soon/design/desktop-preview.jpg" class="snap">
-                    <div class="card-content">
-                        <h4 class="card-title">Comming Soon page</h4>
-                        <p class="card-desc">a coming soon page with desktop and mobile views</p>
-                        <a href="./base-apparel-coming-soon/index.html"> <button class="cta">-></button></a>
-                    </div>
-                </div>
-                <div class="card">
                     <img class="card-image"
-                        src="./huddle-landing-page-with-alternating-feature-blocks-master/design/desktop-preview.jpg" class="snap">
+                        src="./huddle-landing-page-with-alternating-feature-blocks-master/design/desktop-preview.jpg"
+                        class="snap">
                     <div class="card-content">
                         <h4 class="card-title">Huddle Landing page</h4>
-                        <p class="card-desc">A responsive landing page for a fake company </p>
-                        <a href="./huddle-landing-page-with-alternating-feature-blocks-master/index.html"> <button
-                                class="cta">-></button></a>
+
                     </div>
                 </div>
-                <div class="card">
-                    <img class="card-image" src="./four-card-feature-section/design/desktop-preview.jpg" class="snap">
-                    <div class="card-content">
-                        <h4 class="card-title">Responsive Cards</h4>
-                        <p class="card-desc">A card section responsive for all devices</p>
-                        <a href="./four-card-feature-section/index.html"> <button class="cta">-></button></a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card-image" src="./intro-component-with-signup-form/design/desktop-preview.jpg"
-                        class="snap">
-                    <div class="card-content">
-                        <h4 class="card-title">Form Component</h4>
-                        <p class="card-desc">a responsive form with validation </p>
-                        <a href="./intro-component-with-signup-form/index.html"> <button class="cta">-></button></a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card-image" src="./single-price-grid-component-master/design/desktop-preview.jpg"
-                        class="snap">
-                    <div class="card-content">
-                        <h4 class="card-title">Servece price component</h4>
-                        <p class="card-desc">A responsive service price component both desktop and mobile responsive
-                        </p>
-                        <a href="./single-price-grid-component-master/index.html"> <button class="cta">-></button></a>
-                    </div>
-                </div>
-              
                 <div class="card">
                     <img class="card-image"
                         src="./insure-landing-page-master/insure-landing-page-master//design/desktop-preview.jpg"
                         class="snap">
                     <div class="card-content">
                         <h4 class="card-title">Insure landing page</h4>
-                        <p class="card-desc">Insurance company landing page for desktop and mobile </p>
-                        <a href="./insure-landing-page-master/insure-landing-page-master/index.html"> <button
-                                class="cta">-></button></a>
                     </div>
                 </div>
+            </div>
+
+            <div class="comp-name">
+                <h2 class="proj-txt">Copmonents</h2>
+            </div>
+            <hr class="hr-components">
+            <div class="components">
+
             </div>
 
         </div>
@@ -108,16 +76,96 @@
         const cards = document.querySelectorAll('.card')
         const proj_cards = document.querySelectorAll('.card-content');
         const imgaes = document.querySelectorAll('.card-image')
+        const components = document.querySelector('.components')
+        const data = {
+            projects: [
+                {
+                    id: 1,
+                    title: 'somehting',
+                    img: './base-apparel-coming-soon/design/desktop-preview.jpg',
+                    navTo: './base-apparel-coming-soon/index.html'
+                },
+                {
+                    id: 2,
+                    title: 'somehting',
+                    img: './base-apparel-coming-soon/design/desktop-preview.jpg',
+                    navTo: './base-apparel-coming-soon/index.html'
+                }
+            ],
+            components: [
+                {
+                    id: 1,
+                    title: 'Comming Soon page',
+                    img: './base-apparel-coming-soon/design/desktop-preview.jpg',
+                    navTo: './base-apparel-coming-soon/index.html'
+                },
+                {
+                    id: 2,
+                    title: 'Responsive Card',
+                    img: './four-card-feature-section/design/desktop-preview.jpg',
+                    navTo: './four-card-feature-section/index.html'
+                },
+                {
+                    id: 3,
+                    title: 'Form Component',
+                    img: './intro-component-with-signup-form/design/desktop-preview.jpg',
+                    navTo: './intro-component-with-signup-form'
+                },
+                {
+                    id: 4,
+                    title: 'Service Price Component',
+                    img: './single-price-grid-component-master/design/desktop-preview.jpg',
+                    navTo: './single-price-grid-component-master/index.html'
+                },
+            ]
+
+        }
+
+        data.components.map(data_card => {
+            const card = document.createElement('div')
+            card.classList.add('card')
+            const image = document.createElement('img')
+            image.classList.add('card-image')
+            image.src = data_card.img
+            const card_content = document.createElement('div')
+            card_content.classList.add('card-content')
+            const title = document.createElement('h4')
+            title.classList.add('card-title')
+            title.innerText = data_card.title
+            card_content.appendChild(title)
+            card.appendChild(card_content)
+            card.appendChild(image)
+            components.appendChild(card)
+
+            //navigating to components pages
+            card.addEventListener('click', function(){
+                window.location.href=data_card.navTo
+            })
+            
+            card.addEventListener('mouseover', function () {
+                image.style.display = 'none'
+                 card_content.style.display = 'flex'
+                 card_content.style.opacity = '1'         // console.log(first_el)
+            })
+
+            card.addEventListener('mouseout', function () {
+                image.style.display = 'block'
+                 card_content.style.display = 'none'              // console.log(first_el)
+            })
+        })
+
+
         cards.forEach(card => {
             console.log('sdfs')
             card.addEventListener('mouseover', function () {
-               let content = card.getElementsByTagName('div')[0]
-               let image = card.getElementsByTagName('img')[0]
-               image.style.display = 'none'
-               content.style.display = 'flex'              // console.log(first_el)
+                let content = card.getElementsByTagName('div')[0]
+                let image = card.getElementsByTagName('img')[0]
+                image.style.display = 'none'
+                content.style.display = 'flex'
+                content.style.opacity = '1'         // console.log(first_el)
             })
 
-                card.addEventListener('mouseout', function () {
+            card.addEventListener('mouseout', function () {
                 let content = card.getElementsByTagName('div')[0]
                 let image = card.getElementsByTagName('img')[0]
                 image.style.display = 'block'
