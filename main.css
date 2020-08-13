@@ -42,7 +42,8 @@ body::-webkit-scrollbar-thumb {
 h1::selection,
 p::selection,
 span::selection,
-a::selection {
+a::selection ,
+h2::selection{
 	color: #eae7dc;
 	background-color: var(--main);
 }
